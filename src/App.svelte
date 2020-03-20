@@ -1,26 +1,18 @@
-<main>
-	<h1>The Indoor Society</h1>
-	<p>Coming soon!</p>
-</main>
+<script>
+  import { Router, Link, Route } from "svelte-routing";
+  import Home from "./routes/Home.svelte";
+  import AddActivity from "./routes/AddActivity.svelte";
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  export let url = "";
+</script>
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<Router url="{url}">
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="activity/new">Add Activity</Link>
+  </nav>
+  <div>
+    <Route path="activity/new"><AddActivity /></Route>
+    <Route path="/"><Home /></Route>
+  </div>
+</Router>
