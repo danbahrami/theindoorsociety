@@ -5,7 +5,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "serve": "nodemon server/app.js",
+    "serve": "nodemon -r esm server/app.js",
     "postinstall": "rollup -c"
   },
   "devDependencies": {
@@ -19,6 +19,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",

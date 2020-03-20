@@ -1,2 +1,2 @@
 release: sequelize db:migrate
-web: node server/app.js
+web: node -r esm server/app.js
