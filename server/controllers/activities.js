@@ -1,4 +1,4 @@
-import Activity from '../database/models/activity';
+import { Activity } from '../database/models';
 
 class ErrNotFound extends Error {
   constructor(message) {
@@ -14,7 +14,7 @@ const create = async (req, res, next) => {
       description: req.body.description,
     });
 
-    res.status(201).send(goal);
+    res.status(201).send(activity);
   } catch (e) {
     next(e);
   }
