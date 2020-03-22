@@ -1,6 +1,11 @@
+<script>
+	import ActivityList from '../components/ActivityList.svelte';
+</script>
+
 <main>
 	<h1>The Indoor Society</h1>
-	<p>Coming soon!</p>
+	<h2>Next up:</h2>
+	<ActivityList />
 </main>
 
 <style>
