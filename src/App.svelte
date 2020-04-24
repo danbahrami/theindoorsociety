@@ -7,10 +7,6 @@
 </script>
 
 <Router url="{url}">
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="activity/new">Add Activity</Link>
-  </nav>
   <div>
     <Route path="activity/new"><AddActivity /></Route>
     <Route path="/"><Home /></Route>
